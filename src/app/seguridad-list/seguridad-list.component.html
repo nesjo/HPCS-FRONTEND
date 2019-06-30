@@ -1,0 +1,24 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>Lista De Usuarios En Seguridad</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>nombre usuario</th>
+                    <th>clave usuario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let seguridad of seguridad | async">
+                    <td>{{seguridad.nombreusuario}}</td>
+                    <td>{{seguridad.claveusuario}}</td>
+                    <td><button (click)="deleteseguridad(seguridad.codigousuario)" class="btn btn-danger">Delete</button>
+                        <button (click)="seguridadDetails(seguridad.codigousuario)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

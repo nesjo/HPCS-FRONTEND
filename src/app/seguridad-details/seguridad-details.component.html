@@ -1,0 +1,15 @@
+<h2>Seguridad Details</h2>
+
+<hr/>
+<div *ngIf="seguridad">
+    <div>
+        <label><b>nombre usuario: </b></label> {{seguridad.nombreusuario}}
+    </div>
+    <div>
+        <label><b>clave usuario: </b></label> {{seguridad.codigousuario}}
+    </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Volver A Seguridad De Lista</button><br>
